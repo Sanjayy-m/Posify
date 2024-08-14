@@ -36,7 +36,7 @@ def calculate_angle(landmark1, landmark2, landmark3):
 
 def classify_pose(landmarks, output_image):
     # Initialize the label of the pose.
-    label = '--Unknown Pose--'
+    label = 'Unknown Pose'
     
     # Specify the color (Red) for incorrect posture.
     color = (0, 0, 255)
