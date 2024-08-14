@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap">
+    <title>Realtime Pose Detection</title>
+    <style>
+        .bg-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Ensure the image is behind other content */
+            opacity: 0.5; /* Adjust the opacity as needed */
+        }
+        body {
+            background-color: #F5F5DC;
+            color: black; /* Brighter text color */
+            font-family: 'Tilt Neon', sans-serif; /* Using the Tilt Neon font */
+        }
+        #video_feed {
+            display: block;
+            margin: 0 auto;
+            border: 2px solid #333; /* Example border */
+            border-radius: 10px; /* Example border radius */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Example shadow */
+        }
+        h1 {
+            text-align: center; /* Center the text horizontally */
+            font-size:60px;
+            color: #561C24;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    </div> <!-- Use a div for background image -->
+    <h1>Realtime Pose Detection</h1>
+    <div>
+        <img id="video_feed" src="{{ url_for('video_feed') }}" alt="Video Feed" width="800" height="500">
+    </div>
+</body>
+</html>
